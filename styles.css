@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    132.6deg,
+    rgba(71, 139, 214, 1) 23.3%,
+    rgba(37, 216, 211, 1) 84.7%
+  );
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  font-size: 1.5em;
+}
+
+form,
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+form input,
+form button {
+  border: none;
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color: aliceblue;
+}
+
+button {
+  color: aquamarine;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  color: blueviolet;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.5s ease;
+}
+
+.trash-button {
+  color: aquamarine;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.todo-button:hover {
+  color: blueviolet;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.todo.item {
+  padding: 0rem 0.5rem;
+}
+
+/* basically means we can click anywhere on the button */
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: black;
+}
+
+/* animation for deleting the element */
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+/* drop down */
+
+select {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  color: black;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  pointer-events: none;
+}
